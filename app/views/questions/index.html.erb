@@ -1,0 +1,9 @@
+<h2>Questions</h2>
+
+
+<%= link_to 'Add a Question', new_question_path, id: 'new_question_link', remote: true, :class => "btn btn-success" %>
+
+<br><br>
+<div class="questions", id="questions">
+  <%= render @questions %>
+</div>
