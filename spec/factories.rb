@@ -1,5 +1,6 @@
 FactoryGirl.define do
-  factory(:task) do
-    name('finish macrame plant holder')
-  end
+  factory :question do
+    option_a 'Option A'
+    option_b 'Option B'
+  end  
 end

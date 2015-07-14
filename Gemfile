@@ -11,7 +11,6 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 gem 'devise'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
-gem 'simple_form'
 gem 'make_voteable'
 
 group :development do
@@ -34,4 +33,5 @@ group :test do
   gem 'factory_girl_rails'
   gem 'simplecov', :require => false, :group => :test
   gem 'poltergeist'
+  gem 'database_cleaner'
 end

@@ -1,4 +1,4 @@
 $('.new-vote-<%= @question.id %>').hide();
 $('.OR-<%= @question.id %>').hide();
-$('.votes-a-<%= @question.id %>').append('Votes:<%= @question.show_votes_a %>');
+$('.votes-a-<%= @question.id %>').append('Votes: <%= @question.show_votes_a %>');
 $('.votes-b-<%= @question.id %>').append('Votes: <%= @question.show_votes_b %>');
