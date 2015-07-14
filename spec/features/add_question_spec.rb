@@ -2,7 +2,6 @@ require "rails_helper"
 
 describe "add question" do
   it "adds a new question to site" do
-    question = FactoryGirl.create(:question)
     visit '/questions'
     click_on('Add a Question')
     fill_in 'Option a', with: question.option_a

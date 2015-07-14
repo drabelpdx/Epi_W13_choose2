@@ -14,4 +14,12 @@ class Question < ActiveRecord::Base
     return upvotes
   end
 
+  def self.sort_by_votes
+    all.sort_by { |question| -question.vote_count }
+  end
+
+  def vote_count
+    self.votings.length
+  end
+
 end

@@ -3,7 +3,9 @@
 
 <%= link_to 'Add a Question', new_question_path, id: 'new_question_link', remote: true, :class => "btn btn-success" %>
 
-<br><br>
+<br>
+  <%= link_to 'Sort by total votes', questions_path(), id: "sort-questions-link", remote: true %>
+<br>
 <div class="questions", id="questions">
-  <%= render @questions %>
+  <%= render @questions %>  
 </div>

@@ -1,10 +1,14 @@
 class QuestionsController < ApplicationController
   def index
     @questions = Question.all
+    @questions_sorted = Question.sort_by_votes
     @question = Question.new
     @votes = Voting.all
     @vote = Voting.new
-
+    respond_to do |format|
+      format.html { }
+      format.js
+    end
   end
 
   def new
