@@ -1,12 +1,25 @@
 
 <%= form_for @question, remote: true do |f| %>
+<div class="row">
   <div class="field">
-    <span class="new-vote-<%= question.id %>"><%= link_to "Vote", question_votings_path(question, voting: { up_vote: true, voteable_id: question.id}), method: :post, class: "btn btn-success", remote: true %></span>
-    <%= f.label :option_a, question.option_a %>
-    <span class="votes-a-<%= question.id %>"></span>
-    <span class="new-vote-<%= question.id %>"><%= link_to "Vote", question_votings_path(question, voting: { up_vote: false, voteable_id: question.id}), method: :post, class: "btn btn-success", remote: true %></span>
-    <%= f.label :option_b, question.option_b %>
-    <span class="votes-b-<%= question.id %>"></span>
+    <div class="col-md-2">
+      <%= f.label :option_a, question.option_a %>
+      <span class="votes-a-<%= question.id %>"></span>
+    </div>
+    <div class="col-md-1">
+      <span class="new-vote-<%= question.id %>"><%= link_to "Vote", question_votings_path(question, voting: { up_vote: true, voteable_id: question.id}), method: :post, class: "btn btn-primary", remote: true %></span>
+    </div>
+    <div class="col-md-1">
+      <span class="OR-<%= question.id %>">OR</span>
+    </div>
+    <div class="col-md-1">
+      <span class="new-vote-<%= question.id %>"><%= link_to "Vote", question_votings_path(question, voting: { up_vote: false, voteable_id: question.id}), method: :post, class: "btn btn-danger", remote: true %></span>
+    </div>
+    <div class="col-md-2 right">
+      <%= f.label :option_b, question.option_b %>
+      <span class="votes-b-<%= question.id %>"></span>
+    </div>
   </div>
+</div>
   <hr>
 <% end %>
